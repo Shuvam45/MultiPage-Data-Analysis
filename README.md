@@ -45,7 +45,7 @@ It uses Python libraries like **pandas, Plotly, and Streamlit** to explore data,
 
 ```bash
 # Clone the repo
-git clone https://github.com/yourusername/MultiPage-Data-Analysis.git
+git clone https://github.com/Shuvam45/MultiPage-Data-Analysis.git
 cd MultiPage-Data-Analysis
 
 # Install requirements
