@@ -5,6 +5,7 @@ from PIL import Image
 import plotly.express as px
 import plotly.graph_objects as go 
 import os
+import pandas as pd
 
 html_title="""
 <style>
@@ -23,7 +24,16 @@ with col0:
 uploaded_file= st.file_uploader("Choose a File", type=["csv"])
 
 
-file_path = os.path.join(os.path.dirname(__file__), "..", "..", "Students_Social_Media_Addiction.csv")
+
+
+file_path = os.path.join(
+    os.path.dirname(__file__),
+    "..",
+    "..",
+    "data",
+    "Students_Social_Media_Addiction.csv"
+)
+
 df1 = pd.read_csv(file_path)
 
 if uploaded_file is not None:
