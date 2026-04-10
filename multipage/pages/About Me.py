@@ -61,7 +61,7 @@ def show_contact_form():
 col1, col2 = st.columns(2, gap="small")
 
 with col1:
-    st.image(r"C:\Users\HP\Desktop\Coding\Python\StreamLit\Project\download.jpg", width=230)
+    st.image("download.jpg", width=230)
 
     st.title("Education:")
     st.write("South Point High School — Passed out in 2024")
