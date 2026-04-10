@@ -4,6 +4,7 @@ import datetime
 from PIL import Image
 import plotly.express as px
 import plotly.graph_objects as go 
+import os
 
 html_title="""
 <style>
@@ -22,7 +23,8 @@ with col0:
 
 uploaded_file= st.file_uploader("Choose a File", type=["csv"])
 
-df=pd.read_csv(r"C:\Users\HP\Desktop\Coding\Python\StreamLit\Project\student_habits_performance.csv")
+file_path = os.path.join(os.path.dirname(__file__), "..", "..", "students_habits_performance.csv")
+df = pd.read_csv(file_path)
 
 #Data Cleansing
 df.dropna(inplace=True)
