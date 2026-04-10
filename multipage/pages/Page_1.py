@@ -26,15 +26,14 @@ uploaded_file= st.file_uploader("Choose a File", type=["csv"])
 
 
 
-file_path = os.path.join(
-    os.path.dirname(__file__),
-    "..",
-    "..",
-    "data",
-    "Students_Social_Media_Addiction.csv"
-)
+uploaded_file = st.file_uploader("Choose a File", type=["csv"])
 
-df1 = pd.read_csv(file_path)
+if uploaded_file is not None:
+    df = pd.read_csv(uploaded_file)
+    st.success(f"{uploaded_file.name} is successfully uploaded")
+else:
+    st.warning("Please Upload a File")
+    st.stop()   # 🔥 THIS LINE IS IMPORTANT
 
 if uploaded_file is not None:
     df=pd.read_csv(uploaded_file)
